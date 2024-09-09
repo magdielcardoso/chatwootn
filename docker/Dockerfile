@@ -38,7 +38,7 @@ COPY Gemfile Gemfile.lock ./
 # natively compile grpc and protobuf to support alpine musl (dialogflow-docker workflow)
 # https://github.com/googleapis/google-cloud-ruby/issues/13306
 # adding xz as nokogiri was failing to build libxml
-# https://github.com/chatwoot/chatwoot/issues/4045
+# https://github.com/chatwoot/bchat/issues/4045
 RUN apk update && apk add --no-cache build-base musl ruby-full ruby-dev gcc make musl-dev openssl openssl-dev g++ linux-headers xz vips \
   && bundle config set --local force_ruby_platform true
 
@@ -56,7 +56,7 @@ RUN yarn install --network-concurrency 1 --network-timeout 600000
 COPY . /app
 
 # creating a log directory so that image wont fail when RAILS_LOG_TO_STDOUT is false
-# https://github.com/chatwoot/chatwoot/issues/701
+# https://github.com/chatwoot/bchat/issues/701
 RUN mkdir -p /app/log
 
 # generate production assets if production environment
@@ -65,16 +65,9 @@ RUN if [ "$RAILS_ENV" = "production" ]; then \
   && rm -rf spec node_modules tmp/cache; \
   fi
 
-# Generate .git_sha file with current commit hash
-RUN git rev-parse HEAD > /app/.git_sha
-
-# Remove build dependencies
-RUN apk del --no-cache build-base musl ruby-dev gcc musl-dev openssl-dev g++ linux-headers xz \
-  && rm -rf /var/cache/apk/*
-
 # Remove unnecessary files
 RUN rm -rf /gems/ruby/3.3.0/cache/*.gem \
-  && find /gems/ruby/3.3.0/gems/ \( -name "*.c" -o -name "*.o" \) -delete \
+  && find /gems/ruby/3.3.0/gems/ \( -name ".c" -o -name ".o" \) -delete \
   && rm -rf .git \
   && rm .gitignore
 
@@ -116,8 +109,6 @@ RUN if [ "$RAILS_ENV" != "production" ]; then \
 COPY --from=pre-builder /gems/ /gems/
 COPY --from=pre-builder /app /app
 
-# Copy .git_sha file from pre-builder stage
-COPY --from=pre-builder /app/.git_sha /app/.git_sha
 
 WORKDIR /app
 

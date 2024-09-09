@@ -13,20 +13,20 @@ const {
   violetDark,
 } = require('@radix-ui/colors');
 export const colors = {
-  woot: {        
-    25: #FF5500,                
-    50: #FF5500,       
-    75: #FF5500, 
-    100: #FF5500,
-    200: #FF5500,
-    300: #FF5500,               
-    400: #FF5500,      
-    500: #FF5500,         
-    600: #FF5500,     
-    700: #FF5500,               
-    800: #FF5500,      
-    900: #FF5500,          
-  }, 
+  woot: {
+    25: '#FFE6D0',    // Tom super claro
+    50: '#FFDAB8',    // Tom bem claro
+    75: '#FFCD9F',    // Tom claro
+    100: '#FFBF85',   // Tom um pouco mais forte
+    200: '#FFA867',   // Tom mais intenso claro
+    300: '#FF5500',   // Tom padrão
+    400: '#E64D00',   // Um pouco mais escuro
+    500: '#CC4500',   // Escuro intermediário
+    600: '#B33D00',   // Mais escuro
+    700: '#993500',   // Bastante escuro
+    800: '#802D00',   // Muito escuro
+    900: '#662500',   // Tom mais escuro
+  },
   green: {
     50: greenDark.green12,
     100: green.green6,

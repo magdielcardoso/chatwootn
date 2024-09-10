@@ -33,7 +33,7 @@ services:
           memory: 2048M
       labels:
         - traefik.enable=true
-        - traefik.http.routers.chatwoot_admin.rule=Host(app.hos.com.br)
+        - traefik.http.routers.chatwoot_admin.rule=Host(botdelivery.online)
         - traefik.http.routers.chatwoot_admin.entrypoints=websecure
         - traefik.http.routers.chatwoot_admin.tls.certresolver=letsencryptresolver
         - traefik.http.routers.chatwoot_admin.service=chatwoot_admin

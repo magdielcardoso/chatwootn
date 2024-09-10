@@ -115,4 +115,4 @@ WORKDIR /app
 # permisos para rails
 RUN chmod -R 777 ./docker
 
-EXPOSE 6000
+EXPOSE 3000

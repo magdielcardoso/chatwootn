@@ -1,8 +1,76 @@
-<p>Hi</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Marketing Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
 
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
 
-<p>Your contact export file is ready to download.</p>
+        .body-content {
+            padding: 40px 20px;
+            text-align: center;
+        }
 
-<p>
-Click <a href="{{ action_url }}">here</a> to download the export file.
-</p>
+        .body-content h1 {
+            color: #333;
+            font-size: 24px;
+        }
+
+        .body-content p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .cta-button {
+            background-color: #FF5500;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .footer {
+            padding: 20px;
+            text-align: center;
+            color: #999;
+            font-size: 12px;
+        }
+
+        .footer a {
+            color: #FF5500;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Body Content Section -->
+        <div class="body-content">
+            <h1>Exportação de contato</h1>
+            <p>Seu arquivo de exportação de contato está pronto para download.</p>
+            <a href="{{action_url}}" class="cta-button">Clique aqui para baixar o arquivo de exportação.</a>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            <p>Esse é um e-mail automático do <b>BotDelivery.online</b>. O consentimento para envio das comunicações foram aceitos no momento da criação da conta na plataforma.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -239,11 +239,15 @@
   },
   "ONBOARDING": {
     "TITLE": "Olá, 👋. Bem-vindo ao %{installationName}!",
-    "DESCRIPTION": "Obrigado por se inscrever. Queremos que você aproveite o máximo de %{installationName}. Aqui estão algumas coisas que você consegue fazer no(a) %{installationName} para que tenha uma experiência agradável.",
-    "READ_LATEST_UPDATES": "Leia as últimas atualizações",
+    "DESCRIPTION": "Obrigado por se inscrever. Queremos que você aproveite o máximo de %{installationName}. Aqui estão algumas funcionalidades da nossa plataforma.",
+    "GREETING_MORNING": "👋 Bom dia, %{name}. Welcome to %{installationName}.",
+    "GREETING_AFTERNOON": "👋 Good afternoon, %{name}. Welcome to %{installationName}.",
+    "GREETING_EVENING": "👋 Boa noite, %{name}. Welcome to %{installationName}.",
+    "READ_LATEST_UPDATES": "Leia nossas últimas atualizações",
     "ALL_CONVERSATION": {
       "TITLE": "Todas as suas conversas em um só lugar",
-      "DESCRIPTION": "Veja todas as conversas dos seus clientes em um único painel. Você pode filtrar as conversas pelo canal de entrada, rótulo e status."
+      "DESCRIPTION": "Veja todas as conversas dos seus clientes em um único painel. Você pode filtrar as conversas pelo canal de entrada, rótulo e status.",
+      "NEW_LINK": "Clique aqui para criar uma caixa de entrada"
     },
     "TEAM_MEMBERS": {
       "TITLE": "Convidar membros da sua equipe",
@@ -259,6 +263,11 @@
       "TITLE": "Organizar conversas com marcadores",
       "DESCRIPTION": "Etiquetas fornecem uma forma mais fácil de organizar a sua conversa. Criar algumas estiquetas como #solicitação-suporte, #fatura-assunto etc., assim você poderá futuramente utiliza-las em uma conversa posteriormente.",
       "NEW_LINK": "Clique aqui para criar marcadores"
+    },
+    "CANNED_RESPONSES": {
+      "TITLE": "Crie respostas automáticas",
+      "DESCRIPTION": "Modelos de resposta rápida pré-escritos ajudam você a responder rapidamente a uma conversa. Os agentes podem digitar o caractere '/' seguido do código de acesso para inserir uma resposta.",
+      "NEW_LINK": "Clique aqui para criar uma resposta automática"
     }
   },
   "CONVERSATION_SIDEBAR": {
